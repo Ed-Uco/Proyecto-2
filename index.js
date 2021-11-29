@@ -15,5 +15,5 @@ connectDB()
 
 // 4. Servidor 
 app.listen(process.env.PORT, () => {
-    console.log(`Servidor conectado en puerto http://${process.env.PORT}`)
+    console.log(`Servidor conectado en puerto http://localhost:${process.env.PORT}`)
 })
