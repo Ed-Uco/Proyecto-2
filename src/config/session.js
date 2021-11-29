@@ -2,13 +2,13 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
 //Function of session
-const sessionM = app => {
+const sessionManager = app => {
     //Seguridad y flexibilidad con servidores externos.
     app.set('trust proxy', 1);
     //Insert Session
     app.use(
         session({
-            secret: process.env.SECRET_WORD,
+            secret: 'secret',
             resave: true,
             saveUninitialized: false,
             cookie: {
@@ -16,7 +16,7 @@ const sessionM = app => {
                 maxAge: 1000 * 60 * 60,
             },
             store: MongoStore.create({
-                mongoUrl: process.env.MONGODB,
+                mongoUrl: process.env.MONGODB_URI,
             }),
         }),
     );
@@ -24,4 +24,4 @@ const sessionM = app => {
 
 //Export
 
-module.exports = sessionM;
+module.exports = sessionManager;
