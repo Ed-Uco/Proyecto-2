@@ -22,5 +22,10 @@ const movies = [
         image: "https://style.shockvisual.net/wp-content/uploads/2021/08/ETERNALS-POSTER.jpg", 
         description: "In 5000 BC, ten superpowered Eternals—Ajak, Sersi, Ikaris, Kingo, Sprite, Phastos, Makkari, Druig, Gilgamesh, and Thena—are sent by the Celestial Arishem to Earth on their starship, the Domo, to exterminate the invasive Deviants. The last of the Deviants are killed in 1521, and the group's opinions differ over their continued responsibilities and their relationship with humankind. Over the next five hundred years, they mostly live apart from each other, awaiting Arishem's return.",
         movieUrl: "Pending"
+    }, 
+    {
+        title: "Captain America: The First Avenger",
+        director: "Joe Johnston",
+        stars: ["Chis Evans", "Hayley Atwell", "Sebastian Stan", "Tommy Lee Jones", "Hugo Weaving", "Dominic Cooper", "Richard Armitage", "Stanley Tucci", "Samuel L. Jackson", "Toby Jones", "Neal McDonough", "Kenneth Choi"]
     }
 ]
