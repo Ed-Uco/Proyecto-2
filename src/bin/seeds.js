@@ -134,17 +134,17 @@ const movies = [
     },
     {
         title: "Avengers. Age of Ultron",
-        director: 
-        stars:
+        director: "Joss Whedon",
+        stars: ["Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo", "Chris Evans", "Scarlett Johansson", "Jeremy Renner", "James Spader", "Samuel L. Jackson", "Don Cheadle", "Aaron Taylor-Johnson", "Elizabeth Olsen", "Paul Bettany", "Cobie Smulders", "Cobie Smulders", "Hayley Atwell", "Idris Elba", "Linda Cardellini", "Stellan Skarsgård", "Claudia Kim", "Andy Serkis", "Stan Lee"],
         image:
         year: 2015,
-        description:
+        description: "After finding intelligence in Loki's scepter, Tony Stark and Bruce Banner use it to start Ultron, a peacemaker, who soon uncovers the world's wrongs, and plans to rid human error. With help from experimented human beings turned allies, the Avengers search to hunt for Ultron, who is trying to make a synthetic human body to upload his mind into."
         movieUrl:
     },
     {
         title: "Ant Man",
-        director: 
-        stars:
+        director: "Peyton Reed",
+        stars: ["Paul Rudd", "Michael Douglas", "Evangeline Lilly", "Corey Stoll", "Bobby Cannavale", ]
         image:
         year: 2015,
         description:
