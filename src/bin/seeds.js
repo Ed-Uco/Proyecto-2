@@ -144,7 +144,7 @@ const movies = [
     {
         title: "Ant Man",
         director: "Peyton Reed",
-        stars: ["Paul Rudd", "Michael Douglas", "Evangeline Lilly", "Corey Stoll", "Bobby Cannavale", ]
+        stars: ["Paul Rudd", "Michael Douglas", "Evangeline Lilly", "Corey Stoll", "Bobby Cannavale", "Anthony Mackie", "Judy Greer", "Abby Ryder Fortson", "Michael Peña", "David Dastmalchian", "T.I.", "Wood Harris", "Hayley Atwell", "John Slattery", "Martin Donovan"]
         image:
         year: 2015,
         description:

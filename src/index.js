@@ -25,7 +25,3 @@ app.listen(process.env.PORT, () => {
         `Servidor conectado en puerto http://localhost:${process.env.PORT}`,
     );
 })
-
-
-//Export
-/* module.exports = app */
