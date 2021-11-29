@@ -9,6 +9,7 @@ const movieSchema = mongoose.Schema({
     director: String,
     stars: [String],
     image: String,
+    year: Number,
     description: String,
     movieUrl: String
 }, {timestamps: true})
