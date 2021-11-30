@@ -7,7 +7,7 @@ require("dotenv").config()
 
 // 2. Conexión a base de datos
 
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hptoy.mongodb.net/marvel`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -258,6 +258,8 @@ const createMovieDB = async () => {
     console.log("Base de datos poblada con películas de Marvel")
 
     // Cierre de conexión de Mongoose.
+
+    mongoose.connection.close()
 }
 
 createMovieDB()
