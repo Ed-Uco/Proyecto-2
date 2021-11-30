@@ -1,10 +1,10 @@
 // ./controllers/authController.js
-Import
 const express = require('express');
 const router = express.Router();
 
 const authController = require('./../controllers/authController');
 const routeGuard = require('./../middlewares/route-guard.js');
+
 // CREAR USUARIO
 // MOSTRAR EL FORMULARIO
 router.get(

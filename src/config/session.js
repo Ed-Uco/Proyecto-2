@@ -20,6 +20,7 @@ const sessionManager = app => {
             }),
         }),
     );
+    console.log('session manager test')
 };
 
 //Export
