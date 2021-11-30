@@ -7,7 +7,7 @@ require("dotenv").config()
 
 // 2. Conexión a base de datos
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hptoy.mongodb.net/marvel`, {
+mongoose.connect( process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
