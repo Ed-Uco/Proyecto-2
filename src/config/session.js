@@ -17,7 +17,7 @@ const sessionManager = (app) => {
                 maxAge: 1000 * 60 * 60,
             },
             store: MongoStore.create({
-                mongoUrl: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hptoy.mongodb.net/marvel`
+                mongoUrl: process.env.MONGODB_URI
             })
      }))
 }
