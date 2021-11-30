@@ -1,0 +1,15 @@
+<h1>Marvel Movies</h1>
+
+<p> Click on the movie to check the information. </p>
+
+{{#each data}}
+
+  <div class="row row-cols-md-4" style="width: 15rem;">
+    <img src="{{this.image}}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{this.title}}</h5>
+      <a href="/movies/{{this._id}}" class="btn btn-primary">Information</a>
+    </div>
+  </div>
+
+{{/each}}

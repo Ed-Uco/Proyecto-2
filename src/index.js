@@ -24,9 +24,10 @@ app.use((req, res, next) => {
     next();
 });
 // 3. Rutas
+app.use("/movies", require("./routes/movies"))
 app.use('/auth', require('./routes/auth.router'));
 app.use('/user', require('./routes/user.router'));
-app.use('/', require('./routes'));
+app.use('/', require('./routes/index'));
 
 // 4. Servidor 
 app.listen(process.env.PORT, () => {
