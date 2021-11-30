@@ -1,12 +1,11 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
-const userController = require('./../controllers/userController');
+const { getProfile } = require('./../controllers/userController');
 
-const routeGuard = require('./../middlewares/route-guard');
-console.log('El routeGuard importado es: ', routeGuard.usuarioLoggeado);
+const { isLoggedIn } = require('./../middlewares/route-guard');
 
-//2. RUTEO
-router.get('/profile', routeGuard.usuarioLoggeado, userController.getProfile);
+// Routes
+router.get('/:user', isLoggedIn, getProfile);
 
+// Export
 module.exports = router;

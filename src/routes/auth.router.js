@@ -1,25 +1,27 @@
-// ./controllers/authController.js
-const express = require('express');
-const router = express.Router();
+// Imports
+const router = require('express').Router();
 
-const authController = require('./../controllers/authController');
-const routeGuard = require('./../middlewares/route-guard.js');
+const {
+    getSignup,
+    postSignup,
+    getLogin,
+    postLogin,
+    postLogout,
+} = require('./../controllers/authController');
 
-// CREAR USUARIO
-// MOSTRAR EL FORMULARIO
-router.get(
-    '/signup',
-    routeGuard.usuarioNoLoggeado,
-    authController.viewRegister,
-);
-router.post('/signup', routeGuard.usuarioNoLoggeado, authController.register);
+const { isLoggedIn, isLoggedOut } = require('./../middlewares/route-guard');
 
-// INICIAR SESIÓN
-// A. MOSTRAR EL FORMULARIO
-router.get('/login', routeGuard.usuarioNoLoggeado, authController.viewLogin);
-// B. MANEJO DE FORMULARIO
-router.post('/login', routeGuard.usuarioNoLoggeado, authController.login);
-//CERRAR SESION
-router.post('/logout', routeGuard.usuarioLoggeado, authController.logout);
+// Routes
+// Signup
+router.get('/signup', isLoggedOut, getSignup);
+router.post('/signup', postSignup);
 
+// Login
+router.get('/login', isLoggedOut, getLogin);
+router.post('/login', postLogin);
+
+// Logout
+router.post('/logout', isLoggedIn, postLogout);
+
+// Export
 module.exports = router;
