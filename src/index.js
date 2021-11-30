@@ -6,7 +6,9 @@ const connectDB = require("./config/db")
 const sessionManager = require('./config/session');
 
 require('dotenv').config();
+
 // 2. Middlewares
+
 sessionManager(app);
 
 app.use(express.static(__dirname + '/public'));
