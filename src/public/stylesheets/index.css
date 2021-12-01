@@ -85,3 +85,16 @@ h2 {
   height: 1000;
   margin: 20px auto;
 }
+
+footer {
+  height: 40px;
+  width: auto;
+  background-color: rgb(30, 64, 175);
+}
+
+.footer {
+  color: white;
+  float: right;
+  margin-top: 7px;
+  margin-right: 25px;
+}
