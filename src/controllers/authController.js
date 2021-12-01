@@ -45,8 +45,7 @@ exports.postSignup = async (req, res) => {
             email: createdUser.email,
             imgUrl: createdUser.imgUrl,
         };
-        // Redirection
-        res.redirect(`/user/${createdUser.name}`);
+        res.redirect(`/`);
     } catch (error) {
         // Validar email desde servidor
         if (error instanceof mongoose.Error.ValidationError) {
@@ -95,7 +94,6 @@ exports.postLogin = async (req, res) => {
             imgUrl: findUser.imgUrl,
         };
         // Redirect
-       /*  res.redirect(`/user/${findUser.name}`); */
          res.redirect(`/`);
     } catch (e) {
         console.log(e);
