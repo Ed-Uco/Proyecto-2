@@ -4,6 +4,7 @@ body {
 
 h1 {
     font-size: 3rem;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -24,6 +25,7 @@ h2 {
 }
 
 .card-title {
+    font-size: 19px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
@@ -32,3 +34,39 @@ h2 {
 .button {
     align-items: baseline;
 }
+
+.single {
+    margin: 20px;
+    width: auto;
+    height: 800px;
+}
+
+.single-card {
+    background-color: lavender;
+    border: none;
+}
+
+.director {
+    margin-bottom: 10px;
+}
+
+.list-stars {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.stars {
+    margin-right: 10px;
+}
+
+.card-text {
+    text-align: justify;
+    margin: 10px;
+}
+
+.video {
+    margin: 20px auto;
+}
+
