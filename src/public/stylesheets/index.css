@@ -1,5 +1,10 @@
 body {
     background-color: lavender;
+    margin: 0;
+}
+
+.home {
+  margin: auto
 }
 
 h1 {
@@ -69,4 +74,3 @@ h2 {
 .video {
     margin: 20px auto;
 }
-

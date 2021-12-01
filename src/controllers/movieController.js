@@ -20,3 +20,31 @@ exports.getMovie = async (req, res) => {
         data:getTheMovie
     })
 }
+
+// Vista de formulario para crear una película.
+exports.viewCreateMovie = async (req, res) => {
+    res.render("movies/create")
+}
+
+// Crear una película
+exports.createMovie = async (req, res) => {
+    
+    console.log (req.body)
+
+    const title = req.body.title
+    const director = req.body.director
+    const stars = req.body.stars
+    const image = req.body.image
+    const year = req.body.year
+    const description = req.body.description
+    const movieUrl = req.body.movieUrl
+
+    const newMovieCreated = await Movie.create({title, director, stars, image, year, description, movieUrl})
+
+    console.log(newMovieCreated)
+
+    res.redirect("/movies")
+
+    console.log("Datos recibidos")
+
+}
