@@ -88,3 +88,14 @@ exports.editMovie = async (req,res) => {
     res.redirect(`/movies/${updatedMovie._id}`)
 
 }
+
+exports.deleteMovie = async (req, res) => {
+
+    const movieID = req.params.movieID
+
+    const deletedMovie = await Movie.findByIdAndDelete(movieID)
+
+    console.log(deletedMovie)
+
+    res.redirect("/movies")
+}

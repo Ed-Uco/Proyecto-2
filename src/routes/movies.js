@@ -24,6 +24,10 @@ router.get("/:movieID", movieController.getMovie)
 router.get("/:movieID/edit", movieController.viewEditMovie)
 router.post("/:movieID/edit", movieController.editMovie)
 
+// Delete.....
+// Borrar una película
+router.post("/:movieID/delete", movieController.deleteMovie)
+
 // 3. Exportación
 
 module.exports = router
