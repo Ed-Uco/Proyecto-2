@@ -9,12 +9,12 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h3> {{this.title}}</h3>
-            <h4 class="card-title"> Director: {{this.director}}</h4>
+            <h3 class="card-title"> {{this.title}}</h3>
+            <h4 class="director"> Director: {{this.director}}</h4>
             <h6> Stars: </h6>
             <ul class="list-stars">
               {{#each stars}}
-                <li>{{this}}</li>
+                <li class="stars">{{this}}</li>
               {{/each}}
             </ul>
             <p class="card-text">{{this.description}}</p>
