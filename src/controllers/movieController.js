@@ -50,6 +50,10 @@ exports.createMovie = async (req, res) => {
 
 }
 
+const userCanCreate = {
+    if (currentUser = userCreator)
+}
+
 // Editar una película
 exports.viewEditMovie = async (req, res) => {
     console.log(req.params)
