@@ -28,13 +28,17 @@
               <h2 id="applicant-information-title" class="text-lg leading-6 font-medium text-gray-900">
                 Information
               </h2>
+              <label>Name:</label><p class="mt-1 max-w-2xl text-sm text-gray-500">
+                {{currentUser.name}}
+              </p>
+              <label>Email:</label>
               <p class="mt-1 max-w-2xl text-sm text-gray-500">
                 {{currentUser.email}}
               </p>
             </div>
-            <div>
+            {{!-- <div>
               <a href="#" class="block bg-gray-50 text-sm font-medium text-gray-500 text-center px-4 py-4 hover:text-gray-700 sm:rounded-b-lg">Read full application</a>
-            </div>
+            </div> --}}
             <a href="/user/{{currentUser._id}}/editUser">
 			      Edit
 		        </a>
