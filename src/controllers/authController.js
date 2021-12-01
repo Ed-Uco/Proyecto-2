@@ -95,7 +95,8 @@ exports.postLogin = async (req, res) => {
             imgUrl: findUser.imgUrl,
         };
         // Redirect
-        res.redirect(`/user/${findUser.name}`);
+       /*  res.redirect(`/user/${findUser.name}`); */
+         res.redirect(`/`);
     } catch (e) {
         console.log(e);
     }
