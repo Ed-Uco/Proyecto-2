@@ -75,6 +75,11 @@ h2 {
     margin: 20px auto;
 }
 
+.area-button {
+  width: 500px;
+  margin: 30px auto;
+}
+
 .create-form {
   width: 500;
   height: 1000;

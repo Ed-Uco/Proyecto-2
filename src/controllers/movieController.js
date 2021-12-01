@@ -48,3 +48,43 @@ exports.createMovie = async (req, res) => {
     console.log("Datos recibidos")
 
 }
+
+// Editar una película
+exports.viewEditMovie = async (req, res) => {
+    console.log(req.params)
+
+    const movieID = req.params.movieID
+    const foundMovie = await Movie.findById(movieID)
+
+    console.log(foundMovie)
+
+    res.render("movies/edit", {
+        data: foundMovie
+    })
+}
+
+exports.editMovie = async (req,res) => {
+
+    const movieID = req.params.movieID
+
+    const title = req.body.title
+    const director = req.body.director
+    const stars = req.body.stars
+    const image = req.body.image
+    const year = req.body.year
+    const description = req.body.description
+    const movieUrl = req.body.movieUrl
+
+    console.log(movieID)
+    console.log(title, director, stars, image, year, description, movieUrl)
+
+    const updatedMovie = await Movie.findByIdAndUpdate(
+        movieID,
+        {title, director, stars, image, year, description, movieUrl},
+        {new:true})
+
+    console.log(updatedMovie)
+
+    res.redirect(`/movies/${updatedMovie._id}`)
+
+}
