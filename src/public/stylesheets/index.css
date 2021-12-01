@@ -1,5 +1,10 @@
 body {
     background-color: lavender;
+    margin: 0;
+}
+
+.home {
+  margin: auto
 }
 
 h1 {
@@ -70,3 +75,8 @@ h2 {
     margin: 20px auto;
 }
 
+.create-form {
+  width: 500;
+  height: 1000;
+  margin: 20px auto;
+}
