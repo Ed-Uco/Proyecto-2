@@ -11,7 +11,8 @@ const movieSchema = mongoose.Schema({
     image: String,
     year: Number,
     description: String,
-    movieUrl: String
+    movieUrl: String,
+    userCreator: String
 }, {timestamps: true})
 
 // 3. Generación de modelo.
