@@ -16,9 +16,13 @@ router.post("/create", movieController.createMovie)
 // Read.....
 // Lectura de las películas creadas.
 router.get("/", movieController.getAllMovies)
-
 // Lectura de una película específica
 router.get("/:movieID", movieController.getMovie)
+
+// Edit.....
+// Editar la información de una película.
+router.get("/:movieID/edit", movieController.viewEditMovie)
+router.post("/:movieID/edit", movieController.editMovie)
 
 // 3. Exportación
 
