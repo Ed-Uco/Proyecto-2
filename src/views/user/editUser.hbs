@@ -1,0 +1,21 @@
+<h1>Edit Profile</h1>
+
+Este es el id: {{currentUser._id}}
+
+<form action="/user/{{currentUser._id}}/editUser" method="POST">
+	<label>Name</label>
+	<input type="text" name="name" value="{{currentUser.name}}" />
+
+	<br />
+
+	<label>Email</label>
+	<input type="text" name="email" value="{{currentUser.email}}" />
+		
+	<br />
+
+	<button>
+		Save changes
+	</button>
+
+
+</form>

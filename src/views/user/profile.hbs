@@ -1,4 +1,5 @@
 {{!-- profile.hbs --  Perfil de usuario --}}
+
 {{#if currentUser}}
 <div class="min-h-full">
 
@@ -34,6 +35,9 @@
             <div>
               <a href="#" class="block bg-gray-50 text-sm font-medium text-gray-500 text-center px-4 py-4 hover:text-gray-700 sm:rounded-b-lg">Read full application</a>
             </div>
+            <a href="/user/{{currentUser._id}}/editUser">
+			      Edit
+		        </a>
           </div>
         </section>
       </div>
