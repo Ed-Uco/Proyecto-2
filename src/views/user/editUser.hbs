@@ -1,9 +1,9 @@
 <h1>Edit Profile</h1>
 
-Este es el id:
-{{currentUser._id}}
-<div class="create-form">
-  <form action="/user/{{currentUser._id}}/editUser" method="POST">
+<div class="create-form" >
+
+  <form action="/user/{{currentUser._id}}/editUser" method="POST" >
+
     <label>Name</label>
     <input
       type="text"
@@ -11,7 +11,6 @@ Este es el id:
       value="{{currentUser.name}}"
       class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
     />
-
     <br />
 
     <label>Email</label>
@@ -21,14 +20,25 @@ Este es el id:
       value="{{currentUser.email}}"
       class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
     />
-
     <br />
 
-    <button
-      class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-    >
-      Save changes
-    </button>
+    
+
+    <label>Image URL</label>
+    <input
+      type="text"
+      name="imgUrl"
+      value="{{currentUser.imgUrl}}"
+      class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+    />
+    <br />
+
+    <div class="area-button">
+      <button
+        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        type="submit"
+      >Save Changes</button>
+    </div>
 
   </form>
 </div>

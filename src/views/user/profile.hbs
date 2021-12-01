@@ -1,6 +1,6 @@
 {{!-- profile.hbs --  Perfil de usuario --}}
 
-{{#if currentUser}}
+{{#with data}}
 <div class="min-h-full">
 
   <main class="py-10">
@@ -9,12 +9,12 @@
       <div class="flex items-center space-x-5">
         <div class="flex-shrink-0">
           <div class="relative">
-            <img class="h-16 w-16 rounded-full" src="{{currentUser.imgUrl}}" alt="">
+            <img class="h-16 w-16 rounded-full" src="{{this.imgUrl}}" alt="">
             <span class="absolute inset-0 shadow-inner rounded-full" aria-hidden="true"></span>
           </div>
         </div>
         <div>
-          <h1 class="text-2xl font-bold text-gray-900">{{currentUser.name}}</h1>
+          <h1 class="text-2xl font-bold text-gray-900">{{this.name}}</h1>
         </div>
       </div>
     </div>
@@ -29,23 +29,26 @@
                 Information
               </h2>
               <label>Name:</label><p class="mt-1 max-w-2xl text-sm text-gray-500">
-                {{currentUser.name}}
+                {{this.name}}
               </p>
               <label>Email:</label>
               <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                {{currentUser.email}}
+                {{this.email}}
               </p>
             </div>
             {{!-- <div>
               <a href="#" class="block bg-gray-50 text-sm font-medium text-gray-500 text-center px-4 py-4 hover:text-gray-700 sm:rounded-b-lg">Read full application</a>
             </div> --}}
+
+            {{/with}}
+            {{#if currentUser}}
             <a href="/user/{{currentUser._id}}/editUser" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
 			      Edit
 		        </a>
+            {{/if}}
           </div>
         </section>
       </div>
     </div>
   </main>
 </div>
-{{/if}}
