@@ -74,3 +74,9 @@ h2 {
 .video {
     margin: 20px auto;
 }
+
+.create-form {
+  width: 500;
+  height: 1000;
+  margin: 20px auto;
+}
