@@ -33,11 +33,16 @@ Así mismo, la aplicación maneja un nivel mayor de seguridad con el encriptado 
 ## 😁 Profiles 😁
 
 Esta página solamente es visible después de que el usuario accedió exitosamente a la aplicación y muestra la información general referente a las credenciales del mismo.
+* Nombre
+* Correo electrónico
 Esta sección también permite redireccionar al usuario a un formulario para poder editar su información.
  
 ### ✍️ Profiles/Edit ✍️
 
-En este sitio de la aplicación es posible cambiar la información del usuario, llámese el nombre, correo electrónico y la imagen del usuario, con esto se modificará también la pequeña imagen en la esquina superior derecha.
+En este sitio de la aplicación es posible cambiar la información del usuario, los datos mostrados serán:
+* Nombre
+* Correo electrónico
+* Imagen del usuario(con esto se modificará también la pequeña imagen en la esquina superior derecha). 
 
 ## 🎥 Movies 🎥
 
