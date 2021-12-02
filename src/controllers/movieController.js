@@ -14,7 +14,7 @@ exports.getAllMovies = async (req, res) => {
 exports.getMovie = async (req, res) => {
     const singleMovieID = req.params.movieID
     const getTheMovie = await Movie.findById(singleMovieID)
-    console.log(req.session.currentUser.name, getTheMovie.userCreator);
+   
     if (req.session.currentUser.name === getTheMovie.userCreator) {
          res.render('movies/single', {
              data: { getTheMovie, creator: true },
@@ -37,8 +37,6 @@ exports.viewCreateMovie = async (req, res) => {
 
 // Crear una película
 exports.createMovie = async (req, res) => {
-    
-    console.log (req.body)
 
     const title = req.body.title
     const director = req.body.director
@@ -57,11 +55,7 @@ exports.createMovie = async (req, res) => {
 
     const newMovieCreated = await Movie.create({title, director, stars, image, year, description, movieUrl, userCreator})
 
-    console.log(newMovieCreated)
-
     res.redirect("/movies")
-
-    console.log("Datos recibidos")
 
 }
 
@@ -90,13 +84,10 @@ exports.editMovie = async (req,res) => {
     const movieUrl = req.body.movieUrl
     const userCreator = req.body.userCreator
 
-    //console.log(title, director, stars, image, year, description, movieUrl, userCreator)
-
     const singleMovieID = req.params.movieID
     const getTheMovie = await Movie.findById(singleMovieID)
    
     if (!title || !director || !stars || !image || !year || !description || !movieUrl || !userCreator) {
-        console.log (`Este es el director  ${director}`)
         return res.render("movies/edit", {
             msg: 'All fields required.',
             data: getTheMovie
@@ -117,8 +108,6 @@ exports.deleteMovie = async (req, res) => {
     const movieID = req.params.movieID
 
     const deletedMovie = await Movie.findByIdAndDelete(movieID)
-
-    console.log(deletedMovie)
 
     res.redirect("/movies")
 }

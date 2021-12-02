@@ -96,7 +96,7 @@ exports.postLogin = async (req, res) => {
         // Redirect
          res.redirect(`/`);
     } catch (e) {
-        console.log(e);
+        
     }
 };
 

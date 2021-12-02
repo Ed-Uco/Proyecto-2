@@ -10,8 +10,6 @@ router.post('/:userID/editUSer', userController.editUser);
 
 // Routes
 router.get('/:user', isLoggedIn, getProfile);
-// EDIT
-/* router.get('/:user', userController.viewEditUser);
-router.post('/:user', userController.editUser); */
+
 // Export
 module.exports = router;

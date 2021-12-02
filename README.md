@@ -41,9 +41,10 @@ Esta sección también permite redireccionar al usuario a un formulario para pod
 ### ✍️ Profiles/Edit ✍️
 
 En este sitio de la aplicación es posible cambiar la información del usuario, los datos mostrados serán:
+
 * Nombre
 * Correo electrónico
-* Imagen del usuario(con esto se modificará también la pequeña imagen en la esquina superior derecha). 
+* Imagen del usuario (con esto se modificará también la pequeña imagen en la esquina superior derecha). 
 
 ## 🎥 Movies 🎥
 
@@ -58,7 +59,8 @@ En la parte inferior de cada película tendremos un acceso para editar sus datos
 ### 🎞 Movies/Information/Edit 🎞
 
 En esta sección podremos cambiar la información de cada película para mantener los registros actualizados. 
-Los datos mostrados serán 
+Los datos mostrados serán:
+
 * Title
 * Director
 * Stars - elenco 
@@ -97,4 +99,4 @@ https://tu-marvel-movies-app.herokuapp.com/
 
 ## Gracias totales
 
-A [Mike Nieva](https://github.com/mikenieva), [K'ohnin](https://github.com/konhin2) y a [Sam](https://github.com/ta-web-mex) por sus ayuda y enseñanzas invaluables 🥰
+A [Mike Nieva](https://github.com/mikenieva), [K'ohnin](https://github.com/konhin2) y a [Sam](https://github.com/ta-web-mex) por su ayuda y enseñanzas invaluables 🥰
