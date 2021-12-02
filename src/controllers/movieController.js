@@ -10,15 +10,24 @@ exports.getAllMovies = async (req, res) => {
     })
 }
 
-// Búsqueda de película por ID.
 
 exports.getMovie = async (req, res) => {
     const singleMovieID = req.params.movieID
     const getTheMovie = await Movie.findById(singleMovieID)
-
-    res.render("movies/single", {
-        data:getTheMovie
-    })
+    console.log(req.session.currentUser.name, getTheMovie.userCreator);
+    if (req.session.currentUser.name === getTheMovie.userCreator) {
+         res.render('movies/single', {
+             data: { getTheMovie, creator: true },
+         });
+        return
+    }
+    else {
+         res.render('movies/single', {
+             data: { getTheMovie },
+         });
+    }
+   
+   
 }
 
 // Vista de formulario para crear una película.
