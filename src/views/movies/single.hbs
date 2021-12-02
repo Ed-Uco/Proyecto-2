@@ -1,39 +1,41 @@
-<div class="single">
 
-  {{#with data}}
+<div class="single">
+ {{#with data}}
+ 
 
     <div class="single-card card mb-3"">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="{{this.image}}" class="img-fluid rounded-start" alt="..." />
+          <img src="{{this.getTheMovie.image}}" class="img-fluid rounded-start" alt="..." />
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h3 class="card-title"> {{this.title}}</h3>
-            <h4 class="director"> Director: {{this.director}}</h4>
+            <h3 class="card-title"> {{this.getTheMovie.title}}</h3>
+            <h4 class="director"> Director: {{this.getTheMovie.director}}</h4>
             <h6> Stars: </h6>
             <ul class="list-stars">
-              {{#each stars}}
+              {{#each this.getTheMovie.stars}}
                 <li class="stars">{{this}}</li>
               {{/each}}
             </ul>
-            <p class="card-text">{{this.description}}</p>
-            <iframe class="video" width="600" height="400" src="{{this.movieUrl}}"></iframe>
+            <p class="card-text">{{this.getTheMovie.description}}</p>
+            <iframe class="video" width="600" height="400" src="{{this.getTheMovie.movieUrl}}"></iframe>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    
+    {{#if creator}}
     <div class="area-button">
-      <a href="/movies/{{this._id}}/edit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Edit Marvel Movie</a>
+      <a href="/movies/{{this.getTheMovie._id}}/edit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Edit Marvel Movie</a>
     </div>
-
+    
     <div class="area-button">
-      <form method="POST" action="/movies/{{this._id}}/delete">
+      <form method="POST" action="/movies/{{this.getTheMovie._id}}/delete">
         <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" >Delete Marvel Movie</button>
       </form>
     </div>
-
+  {{/if}}
   {{/with}}
-
 </div>
