@@ -72,11 +72,12 @@ https://tu-marvel-movies-app.herokuapp.com/
 ## 🛠 Construido con 🛠
 
 * HTML
+* NodeJS
 * JavaScript - Funciones CRUD
 * Handlebars - Vistas
 * CSS - Estilos
 * MongoDB - Base de datos
-* Heroku - Despliegue.
+* Heroku - Despliegue
 
 ## ✒️ Autores ✒️
 ### TU Team!

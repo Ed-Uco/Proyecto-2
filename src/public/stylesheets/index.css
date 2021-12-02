@@ -18,6 +18,19 @@ h2 {
     text-align: center;
 }
 
+.img-logout {
+    margin-top: 14px;
+    margin-right: 20px;
+}
+
+.profile {
+    margin-left: 20px;
+}
+
+.img-profile {
+    margin-left: 40px;
+}
+
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -94,7 +107,6 @@ footer {
 
 .footer {
   color: white;
-  float: right;
-  margin-top: 7px;
-  margin-right: 25px;
+  padding-top: 7px;
+  text-align: center;
 }
