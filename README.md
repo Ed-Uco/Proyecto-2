@@ -22,10 +22,11 @@ Este menú se mantiene visible durante toda la navegación de la aplicación.
 Mediante esta pantalla es posible ingresar los datos de un usuario registrado o suscrito. 
 Es necesario tener el nombre de usuario y contraseña con que el usuario se registró.
 En caso necesario, cuenta con la opción de crear una cuenta de usuario nueva.
+Al momento de entrar a la sesión, en la base de datos se crea una cookie que al cerrar la sesión se elimina.
 
 ## 💻 Signup 💻
 
-A través de esta página los visitantes pueden crear una  cuenta de usuario para acceder al contenido. 
+A través de esta página los visitantes pueden crear una cuenta de usuario para acceder al contenido. 
 La aplicación cuenta con diferentes validaciones de correo electrónico y contraseña para la creación de un registro de usuario como el incluir letras mayúsculas, números, etc. 
 Todo esto para que los visitantes tengan la garantía de seguridad en sus credenciales. 
 Así mismo, la aplicación maneja un nivel mayor de seguridad con el encriptado de contraseña en la base de datos.
@@ -70,6 +71,10 @@ Los datos mostrados serán
 
 Esta opción se encuentra al final de toda la galería de películas, nos permite agregar un registro nuevo el cual incluirá toda la información relacionada tal y como se mencionó en el menú de Movies/Information/Edit.
 
+## 🚪 Log out 🚪
+
+En la parte superior derecha se encuentra la imagen del usuario, cada uno está predeterminado, pero en el menú de editar usuario se puede modificar, la imagen es un botón que hace la función de Log out, con esto se termina la sesión del usuario y se borra la cookie de la sesión en la base de datos.
+
 Esperamos que pasen un buen momento utilizando esta aplicación, que la disfruten!!
 
 https://tu-marvel-movies-app.herokuapp.com/
@@ -77,11 +82,12 @@ https://tu-marvel-movies-app.herokuapp.com/
 ## 🛠 Construido con 🛠
 
 * HTML
+* NodeJS
 * JavaScript - Funciones CRUD
 * Handlebars - Vistas
 * CSS - Estilos
 * MongoDB - Base de datos
-* Heroku - Despliegue.
+* Heroku - Despliegue
 
 ## ✒️ Autores ✒️
 ### TU Team!

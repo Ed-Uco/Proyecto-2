@@ -19,11 +19,9 @@ exports.viewEditUser = async (req, res) => {
 };
 
 exports.editUser = async (req, res) => {
-    // 1. EL ID DEL LIBRO
 
     const userID = req.params.userID;
 
-    // 2. LOS NUEVOS CAMBIOS DEL FORMULARIO
     const name = req.body.name;
     const email = req.body.email;
     const imgUrl = req.body.imgUrl;

@@ -9,12 +9,12 @@
       <div class="flex items-center space-x-5">
         <div class="flex-shrink-0">
           <div class="relative">
-            <img class="h-16 w-16 rounded-full" src="{{this.imgUrl}}" alt="">
-            <span class="absolute inset-0 shadow-inner rounded-full" aria-hidden="true"></span>
+            <img class="img-profile h-16 w-16 rounded-full" src="{{this.imgUrl}}" alt="">
+            <span class="img-profile absolute inset-0 shadow-inner rounded-full" aria-hidden="true"></span>
           </div>
         </div>
         <div>
-          <h1 class="text-2xl font-bold text-gray-900">{{this.name}}</h1>
+          <h1 class="profile text-2xl font-bold text-gray-900">{{this.name}}</h1>
         </div>
       </div>
     </div>
@@ -28,19 +28,25 @@
               <h2 id="applicant-information-title" class="text-lg leading-6 font-medium text-gray-900">
                 Information
               </h2>
+              <br>
               <label>Name:</label><p class="mt-1 max-w-2xl text-sm text-gray-500">
                 {{this.name}}
               </p>
+              <br>
               <label>Email:</label>
               <p class="mt-1 max-w-2xl text-sm text-gray-500">
                 {{this.email}}
               </p>
             </div>
+
+            <p class="log-out-t mt-1 max-w-2xl text-sm text-gray-400"> * For Log Out click on your profile photo in the right superior corner *</p>
             {{/with}}
+          <div class="area-button"> 
             {{#if currentUser}}
-            <a href="/user/{{currentUser._id}}/editUser" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-			      Edit
-		        </a>
+              <a href="/user/{{currentUser._id}}/editUser" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+			        Edit
+		          </a>
+              <br>
             {{/if}}
           </div>
         </section>
