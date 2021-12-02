@@ -91,14 +91,15 @@ exports.editMovie = async (req,res) => {
     const userCreator = req.body.userCreator
 
     //console.log(title, director, stars, image, year, description, movieUrl, userCreator)
+
     const singleMovieID = req.params.movieID
     const getTheMovie = await Movie.findById(singleMovieID)
-    console.log (getTheMovie)
    
-    if ((!getTheMovie.title, !getTheMovie.director, !getTheMovie.stars, !getTheMovie.image, !getTheMovie.year, !getTheMovie.description, !getTheMovie.movieUrl, !getTheMovie.userCreator)) {
+    if (!title || !director || !stars || !image || !year || !description || !movieUrl || !userCreator) {
         console.log (`Este es el director  ${director}`)
         return res.render("movies/edit", {
             msg: 'All fields required.',
+            data: getTheMovie
         })
     } else {
         const updatedMovie = await Movie.findByIdAndUpdate(
@@ -107,7 +108,7 @@ exports.editMovie = async (req,res) => {
         {new:true})
         
         res.redirect(`/movies/${updatedMovie._id}`)
-        
+
     }
 }
 
