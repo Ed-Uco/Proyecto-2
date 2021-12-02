@@ -255,7 +255,6 @@ const movies = [
 
 const createMovieDB = async () => {
     const newMovies = await Movie.create(movies)
-    console.log("Base de datos poblada con películas de Marvel")
 
     // Cierre de conexión de Mongoose.
 
