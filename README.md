@@ -80,7 +80,8 @@ https://tu-marvel-movies-app.herokuapp.com/
 
 ## ✒️ Autores ✒️
 ### TU Team!
-[Kurai Tsukino](https://github.com/KuraiTsukino) aka Sandra Mena 
+[Kurai Tsukino](https://github.com/KuraiTsukino) aka Sandra Mena
+
 [Edgar Uco](https://github.com/Ed-Uco) 
 
 ## Gracias totales
