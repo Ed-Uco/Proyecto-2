@@ -49,6 +49,12 @@ exports.createMovie = async (req, res) => {
     const movieUrl = req.body.movieUrl
     const userCreator = req.body.userCreator
 
+    if ((!title, !director, !stars, !image, !year, !description, !movieUrl, !userCreator)) {
+        return res.render("movies/create", {
+            msg: 'All fields required.',
+        })
+    }
+
     const newMovieCreated = await Movie.create({title, director, stars, image, year, description, movieUrl, userCreator})
 
     console.log(newMovieCreated)
@@ -59,15 +65,12 @@ exports.createMovie = async (req, res) => {
 
 }
 
-
 // Editar una película
 exports.viewEditMovie = async (req, res) => {
-    console.log(req.params)
 
     const movieID = req.params.movieID
     const foundMovie = await Movie.findById(movieID)
 
-    console.log(foundMovie)
 
     res.render("movies/edit", {
         data: foundMovie
@@ -87,18 +90,25 @@ exports.editMovie = async (req,res) => {
     const movieUrl = req.body.movieUrl
     const userCreator = req.body.userCreator
 
-    console.log(movieID)
-    console.log(title, director, stars, image, year, description, movieUrl, userCreator)
-
-    const updatedMovie = await Movie.findByIdAndUpdate(
+    //console.log(title, director, stars, image, year, description, movieUrl, userCreator)
+    const singleMovieID = req.params.movieID
+    const getTheMovie = await Movie.findById(singleMovieID)
+    console.log (getTheMovie)
+   
+    if ((!getTheMovie.title, !getTheMovie.director, !getTheMovie.stars, !getTheMovie.image, !getTheMovie.year, !getTheMovie.description, !getTheMovie.movieUrl, !getTheMovie.userCreator)) {
+        console.log (`Este es el director  ${director}`)
+        return res.render("movies/edit", {
+            msg: 'All fields required.',
+        })
+    } else {
+        const updatedMovie = await Movie.findByIdAndUpdate(
         movieID,
         {title, director, stars, image, year, description, movieUrl, userCreator},
         {new:true})
-
-    console.log(updatedMovie)
-
-    res.redirect(`/movies/${updatedMovie._id}`)
-
+        
+        res.redirect(`/movies/${updatedMovie._id}`)
+        
+    }
 }
 
 exports.deleteMovie = async (req, res) => {
